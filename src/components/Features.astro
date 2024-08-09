@@ -1,5 +1,8 @@
 ---
 import Card from "./Card.astro";
+import Geometric from "./features-icons/Geometric.astro";
+import Draw from "./features-icons/Draw.astro";
+import Paint from "./features-icons/Paint.astro";
 ---
 
 <section>
@@ -10,31 +13,30 @@ import Card from "./Card.astro";
     </h3>
     <div class="feature-cards">
       <Card
-        img="none"
         title="OpenType features Variable fonts"
         description="Slate helps you see how many more days you need to work to reach your financial goal"
-      />
+      ><Geometric></Geometric></Card>
 
       <Card
-        img="none"
         title="Design wiht real data"
         description="Slate helps you see how many more days you need to work to reach your financial goal"
-      />
+        ><Draw></Draw></Card>
 
       <Card
-        img="none"
         title="Fastest way to take action"
         description="Slate helps you see how many more days you need to work to reach your financial goal"
-      />
+        ><Paint></Paint></Card>
     </div>
-    <video height="400" autoplay loop>
-        <source src="bussines.mp4" type="video/mp4">
-    </video>
+    <div class="video-container">
+      <video>
+        <source src="bussines.mp4" type="video/mp4" />
+      </video>
+    </div>
   </div>
 </section>
 
 <style>
-  .features-container{
+  .features-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,10 +62,22 @@ import Card from "./Card.astro";
     margin-bottom: 80px;
   }
 
-  .feature-cards{
+  .feature-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 800px;
     margin-bottom: 80px;
+  }
+
+  .video-container{
+    display: flex;
+    min-width: 400px;
+    max-width: 850px;
+  }
+
+  video {
+    width: 100%;
+    border-radius: 30px;
+    filter: drop-shadow(1px 1px 8px rgb(121, 120, 120));
   }
 </style>

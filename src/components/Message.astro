@@ -1,0 +1,54 @@
+---
+import Button from "./Button.astro";
+---
+<section>
+  <div class="message-container">
+    <div class="message">
+      <h2>Fastest way to organize</h2>
+      <h3>
+        Most calendars are designed for teams. Slate is designed for freelancers
+      </h3>
+      <Button></Button>
+    </div>
+    <div class="message-img">
+        <img src="Macbook.png" alt="Macbook">
+    </div>
+  </div>
+</section>
+<style>
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  .message-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    height: 600px;
+  }
+  h2{
+    display: flex;
+    width: 300px;
+    font-size: 2rem;
+    color: var(--text);
+  }
+  h3{
+    display: flex;
+    width: 350px;
+    color: var(--text-secondary);
+    margin-top: 20px;
+  }
+img{
+    display: flex;
+    min-width: 200px;
+    width: 400px;
+}
+
+@media (max-width: 800px) {
+    .message-container{
+        flex-direction: column;
+    }
+}
+</style>
