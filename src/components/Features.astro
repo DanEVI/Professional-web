@@ -3,6 +3,7 @@ import Card from "./Card.astro";
 import Geometric from "./features-icons/Geometric.astro";
 import Draw from "./features-icons/Draw.astro";
 import Paint from "./features-icons/Paint.astro";
+
 ---
 
 <section>
@@ -28,7 +29,7 @@ import Paint from "./features-icons/Paint.astro";
         ><Paint></Paint></Card>
     </div>
     <div class="video-container">
-      <video>
+      <video autoplay class="video">
         <source src="bussines.mp4" type="video/mp4" />
       </video>
     </div>
@@ -81,3 +82,15 @@ import Paint from "./features-icons/Paint.astro";
     filter: drop-shadow(1px 1px 8px rgb(121, 120, 120));
   }
 </style>
+
+<script>
+  const video = document.querySelector("video");
+
+  video.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  })
+</script>

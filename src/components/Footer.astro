@@ -1,3 +1,11 @@
+---
+import Marker from "./features-icons/Marker.astro";
+import Phone from "./features-icons/Phone.astro";
+import X from "./features-icons/X.astro";
+import Facebook from "./features-icons/Facebook.astro";
+import Linkedin from "./features-icons/Linkedin.astro";
+---
+
 <footer>
   <div class="footer-container">
     <div class="footer-column">
@@ -13,6 +21,7 @@
       </div>
       <div>
         <ul>
+          <h4>Tomothy</h4>
           <li>Eleanor Edwards</li>
           <li>Ted Robertson</li>
           <li>Annette Russeli</li>
@@ -22,6 +31,7 @@
       </div>
       <div>
         <ul>
+          <h4>Jane Black</h4>
           <li>Philip Jones</li>
           <li>Product</li>
           <li>Collen Russell</li>
@@ -30,20 +40,93 @@
         </ul>
       </div>
     </div>
+    <div class="footer-column2">
+      <div class="icon-contact">
+        <ul>
+          <li><Marker class="icon" />Dirección de empresa</li>
+          <li><Phone class="icon" />(+99) 99999999</li>
+        </ul>
+      </div>
+      <div class="icon-social">
+        <X class="icon-svg" />
+        <Facebook class="icon-svg" />
+        <Linkedin class="icon-svg" />
+      </div>
+    </div>
   </div>
+
+  <style>
+    footer {
+      color: var(--primary);
+      background-color: var(--font-secondary);
+    }
+    .footer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 350px;
+      gap: 100px;
+    }
+
+    .footer-column {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 80px;
+      height: 250px;
+    }
+
+    .footer-column2 {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 250px;
+      width: 250px;
+      gap: 20px;
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    li {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+    .icon-contact{
+      width: 100%;
+      display: flex;
+      justify-items: start;
+    }
+    .icon-social {
+      color: var(--primary);
+      display: flex;
+      width: 100%;
+      justify-content: start;
+      align-items: center;
+    }
+    
+    .icon-svg {
+      height: 30px;
+      width: 30px;
+      margin-left: 10px; 
+    }
+  </style>
 </footer>
-
-<style>
-    .footer-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-column{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 40px;
-    }
-</style>
